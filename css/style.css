@@ -1,0 +1,20 @@
+.goog-te-banner-frame.skiptranslate,
+body.notranslate>div.skiptranslate {
+  display: none !important;
+}
+
+body.notranslate {
+  top: 0 !important;
+}
+
+/* .skiptranslate.goog-te-gadget span a{
+  display: none;
+}
+.skiptranslate.goog-te-gadget span::after{
+  content: "WPGRABY.com";
+  display: inline-block;
+  font-weight: 700;
+} */
+.postbox.ep-translator-box {
+  background-color: azure;
+}
