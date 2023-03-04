@@ -12,8 +12,8 @@ class EPOptions_Settings_Page {
   }
 
   public function wph_create_settings() {
-    $page_title = 'EP Options';
-    $menu_title = 'EP Options';
+    $page_title = 'EPT Options';
+    $menu_title = 'EPT Options';
     $capability = 'manage_options';
     $slug = 'EPOptions';
     $callback = array($this, 'wph_settings_content');

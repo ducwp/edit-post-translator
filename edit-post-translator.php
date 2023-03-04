@@ -12,7 +12,7 @@
 
 require_once __DIR__ . '/options.php';
 
-function ep_check_types() {
+function ept_check_types() {
   global $typenow;
   $post_types = get_option('ep_translator_post_types', []);
   if (is_array($post_types) && in_array($typenow, array_keys($post_types))) return true;
@@ -21,7 +21,7 @@ function ep_check_types() {
 }
 
 function ep_translator_box($post) {
-  if (!ep_check_types()) return;
+  if (!ept_check_types()) return;
 
   echo '<div class="postbox ep-translator-box">
         <div class="postbox-header"><h2 class="hndle ui-sortable-handle">' . __('Post Translator', 'wpgraby') . '</h2></div>
@@ -34,8 +34,8 @@ function ep_translator_box($post) {
 add_action('submitpost_box', 'ep_translator_box');
 
 function ep_translator_scripts() {
-  if (!ep_check_types()) return;
-  
+  if (!ept_check_types()) return;
+
   wp_enqueue_style('ep-translator-style', plugins_url('/css/style.css', __FILE__));
   wp_enqueue_script('ep-translator-script', plugins_url('/js/script.js', __FILE__), ['jquery'], '1.0.0', true);
   $params = array(
@@ -46,7 +46,7 @@ function ep_translator_scripts() {
 }
 add_action('admin_enqueue_scripts', 'ep_translator_scripts');
 
-function ep_add_body_classes($classes) {
+function ept_add_body_classes($classes) {
   return "$classes notranslate";
 }
-add_filter('admin_body_class', 'ep_add_body_classes');
+add_filter('admin_body_class', 'ept_add_body_classes');
