@@ -7,7 +7,7 @@
  * Version:     1.0.0
  * Author:      Duc Nguyen [0936 770 119]
  * Author URI:  http://layoutup.com
- * Text Domain: awesome-wp-plugin
+ * Text Domain: wpgraby
  */
 
 require_once __DIR__ . '/options.php';
